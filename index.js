@@ -31,7 +31,7 @@ function init() {
     // scene.add( pointLight2 );
 
     new GLTFLoader()
-        .setPath( 'assets/' )
+        .setPath( './assets/' )
         .load( 'Company404_logo_3d.gltf', function ( gltf ) {
             scene.add( gltf.scene );
             logoObject1 = gltf.scene.children[0];
