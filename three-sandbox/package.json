@@ -1,0 +1,22 @@
+{
+  "name": "three-sandbox",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "host": "vite --host",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "vite": "^4.2.0"
+  },
+  "dependencies": {
+    "@pixi/filter-ascii": "^5.1.1",
+    "pixi.js": "^7.2.3",
+    "three": "^0.150.1",
+    "three-mtl-loader": "^1.0.2",
+    "three-obj-loader": "^1.1.3"
+  }
+}
