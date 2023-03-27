@@ -8,8 +8,7 @@ import { RoomEnvironment } from 'three/addons/environments/RoomEnvironment.js';
 import { AsciiEffect } from 'three/addons/effects/AsciiEffect.js';
 
 let camera, scene, renderer, controls, effect, logoObject;
-var asciiEnabled = parent.document.getElementById("asciiBtn");
-var asciiDisabled = parent.document.getElementById("noAsciiBtn");
+var asciiSwitch = parent.document.getElementById("asciiSwitch"); 
 
 if (localStorage.getItem('ascii') === 'true') {
     init(true);
@@ -21,14 +20,16 @@ if (localStorage.getItem('ascii') === 'true') {
     render(false);
 }
 
-asciiEnabled.addEventListener('click', function () {
-    localStorage.setItem('ascii', true);
-    window.location.reload();
-});
-
-asciiDisabled.addEventListener('click', function () {
-    localStorage.setItem('ascii', false);
-    window.location.reload();
+asciiSwitch.addEventListener('click', function () {
+    if (asciiSwitch.checked) {
+        localStorage.setItem('ascii', true);
+        window.location.reload();
+    }
+    else {
+        localStorage.setItem('ascii', false);
+        window.location.reload();
+    }
+    
 });
 
 function init(asciiMode) {
