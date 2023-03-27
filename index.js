@@ -2,14 +2,17 @@ var asciiSwitch = document.getElementById("asciiSwitch");
 
 asciiSwitch.addEventListener('click', function () {
     if (asciiSwitch.checked) {
+        localStorage.setItem('ascii', true);
         setAsciiStyles()
     }
     else {
+        localStorage.setItem('ascii', false);
         setNormalStyles()
     }
 });
 
 if (localStorage.getItem('ascii') === 'true') {
+    asciiSwitch.checked = true;
     setAsciiStyles()
 } else {
     setNormalStyles()
