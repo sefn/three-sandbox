@@ -80,7 +80,7 @@ function init(asciiMode) {
     const environment = new RoomEnvironment();
     const pmremGenerator = new THREE.PMREMGenerator(renderer);
     if (asciiMode == false) {
-        scene.background = new THREE.Color( 0xdddddd );
+        scene.background = new THREE.Color( 0xeeeeee );
     }
 
     scene.environment = pmremGenerator.fromScene(environment).texture;
