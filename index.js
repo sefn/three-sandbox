@@ -2,11 +2,25 @@ var asciiEnabled = document.getElementById("asciiBtn");
 var asciiDisabled = document.getElementById("noAsciiBtn");
 
 asciiEnabled.addEventListener('click', function () {
-    localStorage.setItem('ascii', true);
-    window.location.reload();
+    setAsciiStyles()
 });
 
 asciiDisabled.addEventListener('click', function () {
-    localStorage.setItem('ascii', false);
-    window.location.reload();
+    setNormalStyles()
 });
+
+if (localStorage.getItem('ascii') === 'true') {
+    setAsciiStyles()
+} else {
+    setNormalStyles()
+}
+
+function setAsciiStyles() {
+    document.body.style.background = 'black';
+    document.body.style.color = 'white';
+}
+
+function setNormalStyles() {
+    document.body.style.background = '#eeeeee';
+    document.body.style.color = 'black';
+}
