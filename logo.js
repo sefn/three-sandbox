@@ -72,7 +72,7 @@ function init(asciiMode) {
         renderer.setPixelRatio(window.devicePixelRatio);
         renderer.setSize(window.innerWidth, window.innerHeight);
         renderer.toneMapping = THREE.ACESFilmicToneMapping;
-        renderer.toneMappingExposure = 0.5;
+        renderer.toneMappingExposure = 0.6;
         renderer.outputEncoding = THREE.sRGBEncoding;
         container.appendChild(renderer.domElement);
     }

@@ -19,7 +19,7 @@ canvas {
 
 main {
     width: 100vw;
-    color: white;
+    color: #eeeeee;
     z-index: 99;
     position: absolute;
     width: 100%;
@@ -71,7 +71,7 @@ blockquote {
 
 blockquote p {
     color: black;
-    background-color: white;
+    background-color: #eeeeee;
     font-size: 4rem;
     display: inline;
     line-height: 1;
