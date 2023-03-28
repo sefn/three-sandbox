@@ -51,7 +51,7 @@ function init(asciiMode) {
 
     new GLTFLoader()
         .setPath('./assets/')
-        .load('Company404_logo_3d_v2.gltf', function (gltf) {
+        .load('Company404_logo_3d.glb', function (gltf) {
             logoObject = gltf.scene;
             scene.add(gltf.scene);
         });
@@ -72,7 +72,7 @@ function init(asciiMode) {
         renderer.setPixelRatio(window.devicePixelRatio);
         renderer.setSize(window.innerWidth, window.innerHeight);
         renderer.toneMapping = THREE.ACESFilmicToneMapping;
-        renderer.toneMappingExposure = 1;
+        renderer.toneMappingExposure = 0.5;
         renderer.outputEncoding = THREE.sRGBEncoding;
         container.appendChild(renderer.domElement);
     }
@@ -140,7 +140,6 @@ function animateAscii() {
         // logoObject.rotation.z += 0.0005;
         logoObject.rotation.y = Math.sin(Date.now() * 0.0003) * Math.PI * 0.05;
         logoObject.rotation.z = Math.sin(Date.now() * 0.0003) * Math.PI * 0.08;
-
     }
 
     controls.update();
